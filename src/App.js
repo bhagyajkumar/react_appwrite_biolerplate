@@ -1,7 +1,7 @@
 import React from 'react';
 import { AuthProvider, useAuth } from './AuthContext';
-import Login from './components/Login';
-import Signup from './components/Signup';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from 'react-router-dom';
 

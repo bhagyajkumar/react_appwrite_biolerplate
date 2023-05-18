@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../AuthContext';
 
 const Signup = () => {
+    const [username, setUsername] = useState('')
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const { signup } = useAuth();
@@ -35,7 +36,10 @@ const Signup = () => {
                                     <h2 className="fw-bold mb-2 text-uppercase">Signup</h2>
                                     <p className="text-white-50 mb-5">Please enter your login and password!</p>
                                     <form onSubmit={handleSignup}>
-
+                                        <div className="form-outline form-white mb-4">
+                                            <input onChange={(e) => setUsername(e.target.value)} value={username} type="text" id="typeUsernameX" className="form-control form-control-lg" />
+                                            <label className="form-label" htmlFor="typeEmailX">Username</label>
+                                        </div>
                                         <div className="form-outline form-white mb-4">
                                             <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" id="typeEmailX" className="form-control form-control-lg" />
                                             <label className="form-label" htmlFor="typeEmailX">Email</label>
